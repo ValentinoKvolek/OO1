@@ -13,8 +13,9 @@ public class Producto {
     }
 
     public double getPrecio(){
-        return this.precioPorKilo *  this.peso;
+        return this.precioPorKilo * this.peso;
     }
+
     public double getPeso(){
         return this.peso;
     }

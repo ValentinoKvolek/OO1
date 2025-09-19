@@ -1,21 +1,34 @@
 package org.example;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Balanza {
 
 
     private Integer cantProductos=0;
-    private double precioTotal= 0;
+    private double precioTotal=0;
     private double pesoTotal=0.0;
+    private List<Producto> productos = new ArrayList<>();
 
-    public Balanza(Integer cantProductos, Double precio) {}
+
+
+    public Balanza(Integer cantProductos, Double precio) {
+
+        this.cantProductos = cantProductos;
+        this.precioTotal = precio;
+        productos = new ArrayList<>();
+
+
+    }
 
 
     public void ponerEnCero(){
         this.precioTotal = 0.0;
         this.pesoTotal = 0.0;
         this.cantProductos=0;
+        productos.clear();
     }
 
 
@@ -40,6 +53,13 @@ public class Balanza {
         return ticket;
 
     }
+
+    public List<Producto> getProductos(){
+
+        return this.productos;
+
+    }
+
 
     public Balanza() {}
 
