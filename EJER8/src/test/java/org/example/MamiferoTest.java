@@ -94,7 +94,7 @@ public class MamiferoTest {
 	@Test
 	void testTieneComoAncestroA() {
 		assertFalse(nala.tieneComoAncestroA(anonimo));
-		assertFalse(mufasa.tieneComoAncestroA(anonimo));
+		assertFalse(mufasa.tieneComo1AncestroA(anonimo));
 		assertFalse(alexa.tieneComoAncestroA(anonimo));
 		assertFalse(alexa.tieneComoAncestroA(alexa));
 		assertTrue(alexa.tieneComoAncestroA(mufasa));

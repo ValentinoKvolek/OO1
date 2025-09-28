@@ -100,6 +100,10 @@ public class Mamifero {
         boolean ancestroPorMadre = (madre != null && madre.tieneComoAncestroA(unMami));
 
         return ancestroPorPadre || ancestroPorMadre;
+
+
+
+
     }
 
 
