@@ -1,11 +1,11 @@
-@startuml
-skinparam packageStyle rectangle
-skinparam classAttributeIconSize 0
-skinparam stereotypeFontColor #555555
-skinparam stereotypeCBackgroundColor #F2F2F2
-skinparam stereotypeCBorderColor #BBBBBB
+    @startuml
+    skinparam packageStyle rectangle
+    skinparam classAttributeIconSize 0
+    skinparam stereotypeFontColor #555555
+    skinparam stereotypeCBackgroundColor #F2F2F2
+    skinparam stereotypeCBorderColor #BBBBBB
 
-package "Distruibudora Eletrica" {
+    package "Distruibudora Eletrica" {
 
   class Usuario {
 
