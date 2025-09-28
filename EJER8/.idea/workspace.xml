@@ -4,8 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29a707ad-a295-4b0e-8aa0-ceb3e9c57ff7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Mamifero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Mamifero.java" afterDir="false" />
+    <list default="true" id="29a707ad-a295-4b0e-8aa0-ceb3e9c57ff7" name="Changes" comment="EJER11">
+      <change afterPath="$PROJECT_DIR$/../EJER11/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../EJER11/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../EJER11/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../EJER11/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../EJER11/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../EJER11/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../EJER11/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../EJER11/src/main/java/org/example/CajaDeAhorro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../EJER11/src/main/java/org/example/Cuenta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,10 +191,24 @@
       <updated>1758308821816</updated>
       <workItem from="1758308822797" duration="3986000" />
       <workItem from="1758755753301" duration="300000" />
+      <workItem from="1759075455100" duration="743000" />
     </task>
+    <task id="LOCAL-00001" summary="EJER11">
+      <option name="closed" value="true" />
+      <created>1759075576609</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1759075576609</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="EJER11" />
+    <option name="LAST_COMMIT_MESSAGE" value="EJER11" />
   </component>
 </project>
