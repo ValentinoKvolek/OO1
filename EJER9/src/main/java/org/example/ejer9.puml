@@ -20,7 +20,7 @@ package " Grafos " {
         +isOff():boolean
     }
      ' Autoasociación
-        Farola "0..*" -- "0..*" Farola : vecinas
+        Farola "0..*" --  Farola : vecinas
 
 
 }
