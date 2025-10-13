@@ -1,8 +1,18 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ClienteDeCorreo {
 
     private Carpeta inbox;
+    private List<Carpeta> carpetas;
+
+    public ClienteDeCorreo() {
+        this.carpetas = new ArrayList<>();
+        this.inbox = new Carpeta("Inbox");
+        this.carpetas.add(inbox);
+    }
 
     public void recibir(Email email){
         if(!this.inbox.agregarEmail(email)){
@@ -10,9 +20,19 @@ public class ClienteDeCorreo {
         }
     }
 
-    public Email buscar(String texto){}
+    public Email buscar(String texto) {
+        for (Carpeta carpeta : carpetas) {
+            Email encontrado = carpeta.buscarEmail(texto);
+            if (encontrado != null) return encontrado;
+        }
+        return null;
+    }
 
     public int espacioOcupado(){
-        return 0;
+        int suma = 0;
+        for (Carpeta carpeta : carpetas){
+            suma += carpeta.espacioOcupado();
+        }
+        return suma;
     }
 }
