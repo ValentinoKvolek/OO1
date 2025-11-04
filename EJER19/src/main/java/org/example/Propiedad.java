@@ -9,18 +9,21 @@ public class Propiedad {
     private String nombreDescriptivo;
     private double precioPorNoche;
     private List<Reserva> reservas = new ArrayList<>();
+    private PoliticaCancelacion politica;
 
 
-    public Propiedad(String direccion, String nombreDescriptivo, double precioPorNoche, List<Reserva> reservas) {
+    public Propiedad(String direccion, String nombreDescriptivo, double precioPorNoche, List<Reserva> reservas ) {
         this.direccion = direccion;
         this.nombreDescriptivo = nombreDescriptivo;
         this.precioPorNoche = precioPorNoche;
         this.reservas = reservas;
+
     }
+
 
     public boolean estaDisponible(LocalDate desde, LocalDate hasta) {
         for (Reserva r : reservas) {
-            if (!r.noSeSuperpone(desde, hasta)) {
+            if (r.seSuperponeCon(desde, hasta)) {
                 return false;
             }
         }
@@ -45,15 +48,13 @@ public class Propiedad {
         return total;
     }
 
-    public void cancelarReserva(Reserva reserva) {
+    public double cancelarReserva(Reserva reserva, LocalDate fechaCancelacion) {
         if (reserva.yaComenzo()) {
-            System.out.println("No se puede cancelar una reserva que ya comenzó.");
-        } else if (reservas.contains(reserva)) {
-            reservas.remove(reserva);
-            System.out.println("Reserva cancelada correctamente.");
-        } else {
-            System.out.println("La reserva no existe en esta propiedad.");
+            throw new IllegalStateException("No se puede cancelar una reserva que ya comenzó");
         }
+        double reembolso = politica.calcularReembolso(reserva, fechaCancelacion, precioPorNoche);
+        reservas.remove(reserva);
+        return reembolso;
     }
 
     public double calcularIngresoEnPeriodo(DateLapse periodo) {
@@ -70,5 +71,11 @@ public class Propiedad {
     public List<Reserva> getReservas() {
         return this.reservas;
     }
+
+    public void setPolitica(PoliticaCancelacion nuevaPolitica) {
+        this.politica = nuevaPolitica;
+    }
+
+
 
 }

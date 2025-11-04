@@ -35,4 +35,12 @@ public class ClienteDeCorreo {
         }
         return suma;
     }
+
+    public int cantidadTotalMails(){
+        int total =0;
+        for (Carpeta carpeta:carpetas){
+            total+=carpeta.cantidadMails();
+        }
+        return total;
+    }
 }

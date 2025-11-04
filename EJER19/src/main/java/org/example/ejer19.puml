@@ -11,7 +11,7 @@ package "Alquileres" {
         -Direccion:String
         -Dni:integer
         -Propiedades:List<Propiedades>
-        +CrearReserva(String nombre, String direccion, Integer dni, List<Propiedades>propiedad):boolean
+        +CrearReserva(LocalDate fechaI, LocalDate fechaF , List<Propiedades>propiedad):boolean
         +CancelarReserva(Propiedad propiedad, Reserva reserva):void;
         +IngresosTotales(DateLapde periodo):double
     }
@@ -50,10 +50,11 @@ package "Alquileres" {
 
     Usuario --> Propiedad :0..*
 
+    Usuario --> Reserva :0..*
+
     Propiedad --> Reserva :0..*
 
-    Reserva --> DateLapde :0..1
-
+    Reserva --> DateLapde :1..1
 
 
 

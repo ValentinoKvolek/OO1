@@ -13,9 +13,9 @@ public class Reserva {
     }
 
 
-    public boolean noSeSuperpone(LocalDate otraDesde, LocalDate otraHasta) {
+    public boolean seSuperponeCon(LocalDate otraDesde, LocalDate otraHasta) {
         DateLapse otroPeriodo = new DateLapse(otraDesde, otraHasta);
-        return  periodo.overlaps(otroPeriodo);
+        return this.periodo.overlaps(otroPeriodo);
     }
 
     public double calcularPrecio(double precioPorNoche) {

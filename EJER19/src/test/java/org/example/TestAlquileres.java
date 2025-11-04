@@ -37,7 +37,7 @@ public class TestAlquileres {
         reservas.add(reserva2);
         reservas.add(reserva3);
 
-        propiedad1 = new Propiedad("J. P. Yerman", "Yoni House", 300.0, reservas);
+        propiedad1 = new Propiedad("J. P. Yerman", "Yoni House" ,300.0, reservas, "flexible");
 
         ArrayList<Propiedad> propiedades = new ArrayList<>();
         propiedades.add(propiedad1);
